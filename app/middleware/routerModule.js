@@ -1,17 +1,20 @@
-const toolsModule = require('../modules/tools');
+const articlesData = require('../data/articles.json');
 
 const routerModule = {
   displayHomepage : (req,res,next) => {
-    const articlesData = require('../data/articles.json');
+    for (let i=0; i < articlesData.length; i++) {
+      const text = articlesData[i].text;
+      let words = text.split(' ');
+      words = words.slice(0, 30);
+      const excerpt = words.join(' ');
+      articlesData[i].excerpt = excerpt;
+    }
     const data = {
       articlesData
     }
     res.render('index', data);
   },
   displayArticle: (req,res,next) => {
-    const articlesData = require('../data/articles.json');
-    //const tools = require('../modules/tools');
-    //const article = articlesData.find(toolsModule.findArticleById(req.params.id, element));
     const article = articlesData.find(
       (article) => {
         return article["id"].toString() === req.params.id;
@@ -28,11 +31,10 @@ const routerModule = {
     }
   },
   displayCategory: (req,res,next) => {
-    let articlesData = require('../data/articles.json');
-    articlesData = articlesData.filter(article => article.category === req.params.category);
-    if(articlesData.length > 0) {
+    articlesDataCategory = articlesData.filter(article => article.category === req.params.category);
+    if(articlesDataCategory.length > 0) {
       const data = {
-        articlesData
+        articlesData: articlesDataCategory
       };
       res.render('index', data);
     } else {
