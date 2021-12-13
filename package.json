@@ -4,6 +4,7 @@
   "description": "parcours s03",
   "main": "index.js",
   "scripts": {
+    "start": "node-dev index.js --no-notify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/O-clock-Zagreus/S03E08-OBlog-AgathePons/issues"
   },
-  "homepage": "https://github.com/O-clock-Zagreus/S03E08-OBlog-AgathePons#readme"
+  "homepage": "https://github.com/O-clock-Zagreus/S03E08-OBlog-AgathePons#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
 }
