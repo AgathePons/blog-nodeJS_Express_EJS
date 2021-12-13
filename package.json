@@ -1,0 +1,19 @@
+{
+  "name": "s03e08-oblog-agathepons",
+  "version": "1.0.0",
+  "description": "parcours s03",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Zagreus/S03E08-OBlog-AgathePons.git"
+  },
+  "author": "AgathePons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Zagreus/S03E08-OBlog-AgathePons/issues"
+  },
+  "homepage": "https://github.com/O-clock-Zagreus/S03E08-OBlog-AgathePons#readme"
+}
